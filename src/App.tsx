@@ -13,13 +13,7 @@ function App() {
   return (
     <ProductContext.Provider value={{ selectedProduct, selectProduct }}>
       <div>
-        <main
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '10em',
-          }}
-        >
+        <main>
           <Breadcrumbs items={['Home', 'Play Kits', selectedProduct.title]} />
           <div
             style={{
