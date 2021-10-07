@@ -5,7 +5,6 @@ export const Container = styled.div`
   flex-wrap: wrap;
   gap: 48px;
   max-height: 4em;
-  max-width: 70%;
 
   img {
     height: 100%;
