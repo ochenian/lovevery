@@ -2,27 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { ThumbnailSlider } from './Styles';
 
-// function importAll(r) {
-//   let images = {};
-//   r.keys().map((item, index) => {
-//     images[item.replace('./', '')] = r(item);
-//   });
-//   return images;
-// }
-
-// const imagesObj = importAll(
-//   require.context('../../assets/senser', false, /.jpg/)
-// );
-// const imageKeys = Object.keys(imagesObj);
-// const images = imageKeys.map((key) => imagesObj[key]);
-
 const Carousel = ({ images }) => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
-
-  console.log(images);
 
   useEffect(() => {
     setNav1(slider1);
