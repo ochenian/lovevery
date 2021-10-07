@@ -8,7 +8,7 @@ const propTypes = {
 };
 
 const Breadcrumbs = ({ items }) => (
-  <Container>
+  <Container style={{ marginBottom: '3em' }}>
     {items.map((item, index) => {
       const lastIndex = items.length - 1;
       return (

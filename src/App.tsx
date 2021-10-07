@@ -1,13 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 import Breadcrumbs from './components/Breadcrumbs';
+import Carousel from './components/Carousel';
+import ProductDetailArea from './pages/ProductDetail';
+import Column from './components/Column';
+import ProductContext from './components/ProductContext';
+import { products } from './products';
+import './styles/globals.css';
 
 function App() {
+  const [selectedProduct, selectProduct] = useState(products[0]);
+
   return (
-    <div className='App'>
-      <Breadcrumbs items={['Home', 'Play Kits', 'The Sensory Playkit']} />
-    </div>
+    <ProductContext.Provider value={{ selectedProduct, selectProduct }}>
+      <div>
+        <main
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '10em',
+          }}
+        >
+          <Breadcrumbs items={['Home', 'Play Kits', selectedProduct.title]} />
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '3em',
+            }}
+          >
+            <Column>
+              <Carousel images={selectedProduct.images} />
+            </Column>
+            <Column>
+              <ProductDetailArea />
+            </Column>
+          </div>
+        </main>
+      </div>
+    </ProductContext.Provider>
   );
 }
 

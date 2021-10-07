@@ -5,6 +5,7 @@ import { color } from '../../styles/constants';
 export const Container = styled.div`
   color: ${color.textMedium};
   font-size: 0.75rem;
+  text-align: left;
 `;
 
 export const Divider = styled.span`
