@@ -23,6 +23,7 @@ Several other items that didn't make the cut include:
 - Unit Tests
 - Code Comments
 - Further mobile optimizations (media queries)
+- Test and improve accessibility
 - General Code Cleanup
 
 To fetch the product data from an endpoint, for a simple query, I'd probably work with the `fetch` API, although, if any complexity is introduced something lightweight like `axios` could be brought in to help out.
