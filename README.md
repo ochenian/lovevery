@@ -19,9 +19,10 @@ Mostly the challenges were related to time constraint issues. I'd really like to
 
 Several other items that didn't make the cut include:
 - SEO Optimizations
+- Typescript typings
 - Unit Tests
 - Code Comments
-- Further mobile optimizations
+- Further mobile optimizations (media queries)
 - General Code Cleanup
 
 To fetch the product data from an endpoint, for a simple query, I'd probably work with the `fetch` API, although, if any complexity is introduced something lightweight like `axios` could be brought in to help out.
