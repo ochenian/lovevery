@@ -30,12 +30,6 @@ To fetch the product data from an endpoint, for a simple query, I'd probably wor
 ## Testing
 Ran out of time to add unit tests, so only some manual testing was accomplished. Several dates were tested and there was a quick look at the UI on mobile. Admittedly, there should be a lot more testing done here.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ## Future Enhancements
 In addition to some of the items mentioned in the Challenges section above, I'd also like to take a look performance optimizations. Moving the images to a CDN would be at the top of the list. I did see a few bugs with the carousel as well that I'd like to fix. Implementing the header would definitely be up there, as well as improving the overall user experience. I ran out of time before being able to display the child's name, so I'd like to add that to the design. And several smaller items like updating the favicon would be good as well.
 
