@@ -1,12 +1,33 @@
-# Getting Started with Create React App
+# Lovevery Take Home Test
+Challenge assigned by Lovevery to test frontend developement skills.
+A demo can be found at https://lovevery-lake.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Goal
+Create a product landing page where a user can input either a due date or date of birth for their child. Upon submitting the date, the user is taken to a specific product page showcasing a Lovevery Play Kit that is appropriate for the child's age in months. Product details and images are dynamically displayed to the user.
 
-## Available Scripts
+## Implementation
+The project was scaffolded with create-react-app. The mock was broken down into components to allow for the possibility of re-use should the project be expanded upon in the future. These are stored under the `components` folder. All site assets (images, svgs, etc) are stored under the `assets` folder. All images, such as award badges and product photos, were downloaded from Lovevery's production site and imported using webpack. 
 
-In the project directory, you can run:
+For the carousel, the third-party React Slick library was used. I noticed this was being used on Lovevery's production site, so decided to include it here as well. Most interesting part of the carousel implementation was adding the thumbnails under the main image. There was a lot of searching through the React Slick docs and looking through others' examples before coming up with the solution there.
 
-### `npm start`
+The product listings are stored in a local file, which is imported directly into the app. The Context API is used to track global changes to the selected product.
+
+To help calculate the child's age based on the date provided, the `date-fns` library was pulled into the project. There was consideration to write the calculation from scratch, but I've found that often there are too many edge cases to handle when working with dates, so in the interest of time (and my own sanity :) ), I decided to go with the third-party lib.
+
+## Challenges
+Mostly the challenges were related to time constraint issues. I'd really like to have a clean and atomic commit history. I also had to forego implementing the header to ensure the main functionality was completed. 
+
+Several other items that didn't make the cut include:
+- SEO Optimizations
+- Unit Tests
+- Code Comments
+- Further mobile optimizations
+- General Code Cleanup
+
+To fetch the product data from an endpoint, for a simple query, I'd probably work with the `fetch` API, although, if any complexity is introduced something lightweight like `axios` could be brought in to help out.
+
+## Testing
+Ran out of time to add unit tests, so only some manual testing was accomplished. Several dates were tested and there was a quick look at the UI on mobile. Admittedly, there should be a lot more testing done here.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,33 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## Future Enhancements
+In addition to some of the items mentioned in the Challenges section above, I'd also like to take a look performance optimizations. Moving the images to a CDN would be at the top of the list. I did see a few bugs with the carousel as well that I'd like to fix. Implementing the header would definitely be up there, as well as improving the overall user experience. I ran out of time before being able to display the child's name, so I'd like to add that to the design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Overall it was a fun project, and I appreciate your time in taking a look at it!
